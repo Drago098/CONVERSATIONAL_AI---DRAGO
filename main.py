@@ -8,7 +8,7 @@ def main():
     classifier = IntentClassifier("config/intents.yaml")
     manager = DialogManager("config/intents.yaml")
 
-    print("🧠 Drago is online! Say something like 'Drago, what's the time?'")
+    print("🧠 Drago is online! Say something like 'Drago, what's the weather in Delhi?'")
     while True:
         user_input = input("You: ")
         if user_input.lower() == "exit":
@@ -18,7 +18,7 @@ def main():
         if WAKE_WORD in user_input.lower():
             cleaned_input = user_input.lower().replace(WAKE_WORD, "").strip()
             intent = classifier.classify(cleaned_input)
-            response = manager.get_response(intent)
+            response = manager.get_response(intent, cleaned_input)  # ✅ FIXED HERE
             print("🧠 Drago:", response)
             speak(response)
         else:
