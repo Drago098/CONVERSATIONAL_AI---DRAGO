@@ -1,0 +1,32 @@
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+.venv/
+ENV/
+
+# OS files
+.DS_Store
+
+# dotenv files
+.env
+.env.*
+
+# IDE/editor configs
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Test/report/output folders (optional)
+tests/__pycache__/
+*.sqlite3
+*.db
